@@ -10,7 +10,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'release'
+  group: "release"
 
 jobs:
   release:
@@ -26,18 +26,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18.16.0
-          cache: 'npm'
+          cache: "pnpm"
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Prepare PUBLIC_URL
         run: |
           PUBLIC_URL=$(echo $GITHUB_REPOSITORY | sed 's/^..*\/\(..*\)$/\/\1\//g')
           echo 'PUBLIC_URL='$PUBLIC_URL >> $GITHUB_ENV
       - name: Build
-        run: npm run build
+        run: pnpm run build
       - name: Upload
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'
+          path: "./build"
       - name: Release
         uses: actions/deploy-pages@v4
