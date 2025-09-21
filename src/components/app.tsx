@@ -13,7 +13,7 @@ function App() {
         // ---
         const url = new URL(window.location.href)
         const app = (
-            optional.actual(url.searchParams.get('app'), 'exabr')
+            optional.actual(url.searchParams.get('app'), 'hieu')
         )
         if (app === undefined) {
             setContext(undefined)
@@ -84,8 +84,8 @@ function App() {
             <header className="App-header">
                 <p>Airbridge Web Example (Select)</p>
                 <button onClick={() => {
-                    window.location.search = '?app=exabr'
-                }}>exabr</button>
+                    window.location.search = '?app=hieu'
+                }}>hieu</button>
             </header>
         </div>
     )

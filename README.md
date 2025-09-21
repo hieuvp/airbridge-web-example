@@ -12,7 +12,7 @@ useEffect(() => {
     // ---
     const url = new URL(window.location.href)
     const app = (
-        optional.actual(url.searchParams.get('app'), 'exabr')
+        optional.actual(url.searchParams.get('app'), 'hieu')
     )
     if (app === undefined) {
         setContext(undefined)
@@ -72,20 +72,20 @@ const openDeeplink = (url: URL) => {
 When `Open Deeplink` button is clicked,
 - If user's OS is `iOS`,
     - If [airbridge-ios-example](https://github.com/ab180/airbridge-ios-example) is installed,
-        - Then user moves to [airbridge-ios-example](https://github.com/ab180/airbridge-ios-example) app with `exabr://deeplink` URL.
+        - Then user moves to [airbridge-ios-example](https://github.com/ab180/airbridge-ios-example) app with `hieu://deeplink` URL.
     - If [airbridge-ios-example](https://github.com/ab180/airbridge-ios-example) is not installed,
         - Then user moves to Apple App Store.
         - And then if user install [airbridge-ios-example](https://github.com/ab180/airbridge-ios-example) and open it.
-        - And then user moves to [airbridge-ios-example](https://github.com/ab180/airbridge-ios-example) app with `exabr://deeplink` URL.
+        - And then user moves to [airbridge-ios-example](https://github.com/ab180/airbridge-ios-example) app with `hieu://deeplink` URL.
             > Airbridge's deferred deeplink feature
     
 - If user's OS is `Android`,
     - If [airbridge-android-example](https://github.com/ab180/airbridge-android-example) is installed,
-        - Then user moves to [airbridge-android-example](https://github.com/ab180/airbridge-android-example) app with `exabr://deeplink` URL.
+        - Then user moves to [airbridge-android-example](https://github.com/ab180/airbridge-android-example) app with `hieu://deeplink` URL.
     - If [airbridge-android-example](https://github.com/ab180/airbridge-android-example) is not installed,
         - Then user moves to Google Play Store.
         - And then if user install [airbridge-android-example](https://github.com/ab180/airbridge-android-example) and open it.
-        - And then user moves to [airbridge-android-example](https://github.com/ab180/airbridge-android-example) app with `exabr://deeplink` URL. (Airbridge's deferred deeplink feature)
+        - And then user moves to [airbridge-android-example](https://github.com/ab180/airbridge-android-example) app with `hieu://deeplink` URL. (Airbridge's deferred deeplink feature)
             > Airbridge's deferred deeplink feature
 
 ```mermaid
