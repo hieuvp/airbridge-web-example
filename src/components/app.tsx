@@ -58,6 +58,17 @@ function App() {
   };
 
   const openDeeplink = (url: URL) => {
+    console.log("Debug: Opening deeplink with URLs:", {
+      deeplinks: {
+        ios: url.href,
+        android: url.href,
+        desktop: "https://airbridge.io",
+      },
+      fallbacks: {
+        ios: "itunes-appstore",
+        android: "google-play",
+      },
+    });
     airbridge.openDeeplink({
       type: "click",
       deeplinks: {
